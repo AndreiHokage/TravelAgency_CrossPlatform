@@ -1,0 +1,6 @@
+D:\UBB-Didactic\An 2\MPP\Proiect\NET\NET\bin\Debug\NET.exe
+D:\UBB-Didactic\An 2\MPP\Proiect\NET\NET\bin\Debug\NET.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\NET\NET\obj\Debug\NET.csprojAssemblyReference.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\NET\NET\obj\Debug\NET.csproj.CoreCompileInputs.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\NET\NET\obj\Debug\NET.exe
+D:\UBB-Didactic\An 2\MPP\Proiect\NET\NET\obj\Debug\NET.pdb
