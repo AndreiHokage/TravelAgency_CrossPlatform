@@ -1,4 +1,5 @@
 ﻿using System;
+using NET.model;
 
 namespace NET
 {
@@ -6,7 +7,6 @@ namespace NET
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Dsffsddfsdf");
         }
     }
 }

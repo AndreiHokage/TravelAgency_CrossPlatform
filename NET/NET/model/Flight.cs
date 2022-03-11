@@ -4,8 +4,6 @@ namespace NET.model
 {
     public class Flight : IIdentifiable<int>
     {
-        private int ID; 
-
         public string Destination { set; get; }
 
         public DateTime Departure { set; get; }
@@ -16,23 +14,21 @@ namespace NET.model
 
         public Flight(int ID, string destination, DateTime departure, string airport, int availableSeats)
         {
-            this.ID = ID;
+            base.ID = ID;
             Destination = destination;
             Departure = departure;
             Airport = airport;
             AvailableSeats = availableSeats;
         }
-
-        public int getID()
+        
+        public Flight(string destination, DateTime departure, string airport, int availableSeats)
         {
-            return ID;
+            Destination = destination;
+            Departure = departure;
+            Airport = airport;
+            AvailableSeats = availableSeats;
         }
-
-        public void setID(int ID)
-        {
-            this.ID = ID;
-        }
-
+        
         public override string ToString()
         {
             return ID + ";" + Destination + ";" + Departure + ";" + Airport + ";" + AvailableSeats;

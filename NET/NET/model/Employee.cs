@@ -2,27 +2,22 @@
 {
     public class Employee : IIdentifiable<int>
     {
-        private int ID;
-
         public string Username { set; get; }
 
         public string Password { set; get; }
 
         public Employee(int ID, string username, string password)
         {
-            this.ID = ID;
+            base.ID = ID;
             Username = username;
             Password = password;
         }
-
-        public int getID()
+        
+        public Employee(string username, string password)
         {
-            return ID;
-        }
-
-        public void setID(int ID)
-        {
-            this.ID = ID;
+            base.ID = ID;
+            Username = username;
+            Password = password;
         }
 
         public override string ToString()
