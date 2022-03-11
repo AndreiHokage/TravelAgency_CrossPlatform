@@ -19,6 +19,13 @@ public class Flight implements Identifiable<Integer>, Serializable {
         this.availableSeats = availableSeats;
     }
 
+    public Flight(String destination, LocalDateTime departure, String airport, Integer availableSeats) {
+        this.destination = destination;
+        this.departure = departure;
+        this.airport = airport;
+        this.availableSeats = availableSeats;
+    }
+
     public String getDestination() {
         return destination;
     }

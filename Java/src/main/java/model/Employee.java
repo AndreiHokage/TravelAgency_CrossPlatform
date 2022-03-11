@@ -14,6 +14,12 @@ public class Employee implements Identifiable<Integer>, Serializable {
         this.password = password;
     }
 
+    public Employee(String username, String password) {
+        this.ID = ID;
+        this.username = username;
+        this.password = password;
+    }
+
     public String getUsername() {
         return username;
     }

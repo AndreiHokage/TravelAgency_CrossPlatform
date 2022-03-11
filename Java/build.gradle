@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'ro.ubbcluj.mpp'
@@ -9,10 +10,37 @@ repositories {
     mavenCentral()
 }
 
+application{
+    mainClass = 'MainTravel'
+}
+
 dependencies {
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.2'
+
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0.3'
+
+
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
+
+jar {
+    duplicatesStrategy (DuplicatesStrategy.EXCLUDE)
+
+    manifest {
+        attributes('Main-Class':'MainTravel')
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 
 test {
     useJUnitPlatform()
