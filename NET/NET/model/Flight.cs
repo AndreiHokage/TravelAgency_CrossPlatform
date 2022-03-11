@@ -4,6 +4,7 @@ namespace NET.model
 {
     public class Flight : IIdentifiable<int>
     {
+        public int ID { set; get; }
         public string Destination { set; get; }
 
         public DateTime Departure { set; get; }
@@ -14,7 +15,7 @@ namespace NET.model
 
         public Flight(int ID, string destination, DateTime departure, string airport, int availableSeats)
         {
-            base.ID = ID;
+            this.ID = ID;
             Destination = destination;
             Departure = departure;
             Airport = airport;
@@ -36,7 +37,10 @@ namespace NET.model
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            Flight flight = obj as Flight;
+            if (obj == null)
+                return false;
+            return ID == flight.ID;
         }
 
         public override int GetHashCode()

@@ -2,6 +2,7 @@
 {
     public class Ticket : IIdentifiable<int>
     {
+        public int ID { get; set; }
         public string CustomerName { set; get; }
 
         public string TouristName { set; get; }
@@ -14,7 +15,7 @@
 
         public Ticket(int ID ,string customerName, string touristName, string customerAddress, int seats, Flight flightForTicket)
         {
-            base.ID = ID;
+            this.ID = ID;
             CustomerName = customerName;
             TouristName = touristName;
             CustomerAddress = customerAddress;
@@ -39,7 +40,10 @@
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            Ticket ticket = obj as Ticket;
+            if (obj == null)
+                return false;
+            return ID == ticket.ID;
         }
 
         public override int GetHashCode()

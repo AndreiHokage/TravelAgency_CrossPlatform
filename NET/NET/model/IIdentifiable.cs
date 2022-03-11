@@ -1,7 +1,7 @@
 ﻿namespace NET.model
 {
-    public class IIdentifiable<TID>
+    public interface IIdentifiable<TID>
     {
-        public TID ID { set; get; }
+        TID ID { set; get; }
     }
 }
