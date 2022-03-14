@@ -22,6 +22,7 @@ public class TicketDBRepository implements TicketRepository{
     private FlightRepository flightRepository;
 
     public TicketDBRepository(FlightRepository flightRepository){
+        logger.info("creating TicketDBRepository");
         this.dbUtils = new JdbcUtils();
         this.flightRepository = flightRepository;
     }
@@ -127,6 +128,7 @@ public class TicketDBRepository implements TicketRepository{
         } catch (SQLException e) {
             logger.error(e);
         }
+
         logger.traceExit();
         return ticketList;
     }

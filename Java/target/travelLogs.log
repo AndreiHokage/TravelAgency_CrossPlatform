@@ -1,0 +1,36 @@
+14 Mar 2022 17:33:05,558 INFO  repository.FlightDBRepository 20 <init> - creating FlightDBRepository
+14 Mar 2022 17:33:05,561 INFO  repository.TicketDBRepository 25 <init> - creating TicketDBRepository
+14 Mar 2022 17:33:05,567 TRACE repository.FlightDBRepository 101 findAll - Enter find all flight
+14 Mar 2022 17:33:05,567 TRACE repository.JdbcUtils 44 getConnection - Enter
+14 Mar 2022 17:33:05,567 TRACE repository.JdbcUtils 22 getNewConnection - Enter
+14 Mar 2022 17:33:05,568 INFO  repository.JdbcUtils 26 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:5432/TravelAgencyDB
+14 Mar 2022 17:33:05,568 INFO  repository.JdbcUtils 27 getNewConnection - user: postgres
+14 Mar 2022 17:33:05,568 INFO  repository.JdbcUtils 28 getNewConnection - pass: postgre
+14 Mar 2022 17:33:05,758 TRACE repository.JdbcUtils 39 getNewConnection - Exit
+14 Mar 2022 17:33:05,759 TRACE repository.JdbcUtils 51 getConnection - Exit with(org.postgresql.jdbc.PgConnection@13b3d178)
+14 Mar 2022 17:33:05,769 TRACE repository.FlightDBRepository 119 findAll - Exit
+14 Mar 2022 17:33:05,776 TRACE repository.TicketDBRepository 111 findAll - Enter find all tickets
+14 Mar 2022 17:33:05,776 TRACE repository.JdbcUtils 44 getConnection - Enter
+14 Mar 2022 17:33:05,776 TRACE repository.JdbcUtils 22 getNewConnection - Enter
+14 Mar 2022 17:33:05,776 INFO  repository.JdbcUtils 26 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:5432/TravelAgencyDB
+14 Mar 2022 17:33:05,776 INFO  repository.JdbcUtils 27 getNewConnection - user: postgres
+14 Mar 2022 17:33:05,776 INFO  repository.JdbcUtils 28 getNewConnection - pass: postgre
+14 Mar 2022 17:33:05,806 TRACE repository.JdbcUtils 39 getNewConnection - Exit
+14 Mar 2022 17:33:05,806 TRACE repository.JdbcUtils 51 getConnection - Exit with(org.postgresql.jdbc.PgConnection@6e15fe2)
+14 Mar 2022 17:33:05,807 TRACE repository.FlightDBRepository 77 findByID - Enter finding Flight with id 3
+14 Mar 2022 17:33:05,807 TRACE repository.JdbcUtils 44 getConnection - Enter
+14 Mar 2022 17:33:05,808 TRACE repository.JdbcUtils 22 getNewConnection - Enter
+14 Mar 2022 17:33:05,808 INFO  repository.JdbcUtils 26 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:5432/TravelAgencyDB
+14 Mar 2022 17:33:05,808 INFO  repository.JdbcUtils 27 getNewConnection - user: postgres
+14 Mar 2022 17:33:05,809 INFO  repository.JdbcUtils 28 getNewConnection - pass: postgre
+14 Mar 2022 17:33:05,841 TRACE repository.JdbcUtils 39 getNewConnection - Exit
+14 Mar 2022 17:33:05,841 TRACE repository.JdbcUtils 51 getConnection - Exit with(org.postgresql.jdbc.PgConnection@57ad2aa7)
+14 Mar 2022 17:33:05,844 TRACE repository.FlightDBRepository 77 findByID - Enter finding Flight with id 1
+14 Mar 2022 17:33:05,844 TRACE repository.JdbcUtils 44 getConnection - Enter
+14 Mar 2022 17:33:05,844 TRACE repository.JdbcUtils 22 getNewConnection - Enter
+14 Mar 2022 17:33:05,844 INFO  repository.JdbcUtils 26 getNewConnection - trying to connect to database ... jdbc:postgresql://localhost:5432/TravelAgencyDB
+14 Mar 2022 17:33:05,845 INFO  repository.JdbcUtils 27 getNewConnection - user: postgres
+14 Mar 2022 17:33:05,845 INFO  repository.JdbcUtils 28 getNewConnection - pass: postgre
+14 Mar 2022 17:33:05,874 TRACE repository.JdbcUtils 39 getNewConnection - Exit
+14 Mar 2022 17:33:05,875 TRACE repository.JdbcUtils 51 getConnection - Exit with(org.postgresql.jdbc.PgConnection@1b8a29df)
+14 Mar 2022 17:33:05,877 TRACE repository.TicketDBRepository 132 findAll - Exit

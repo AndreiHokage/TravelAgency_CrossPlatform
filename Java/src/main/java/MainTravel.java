@@ -35,7 +35,7 @@ public class MainTravel {
        //ticketRepository.update(ticket2,1);
         //ticket2.setID(3);
        // ticketRepository.delete(ticket2);
-       flightRepository.delete(flight2);
+       //flightRepository.delete(flight2);
 
 
         flightRepository.findAll().forEach(System.out::println);

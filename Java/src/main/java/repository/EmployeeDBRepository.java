@@ -15,7 +15,7 @@ public class EmployeeDBRepository implements EmployeeRepository{
     private JdbcUtils dbUtils;
 
     public EmployeeDBRepository(){
-
+        logger.info("creating EmployeeDBRepository");
     }
 
     @Override

@@ -17,6 +17,7 @@ public class FlightDBRepository implements FlightRepository{
     private JdbcUtils dbUtils;
 
     public FlightDBRepository(){
+        logger.info("creating FlightDBRepository");
         dbUtils = new JdbcUtils();
     }
 
