@@ -19,12 +19,10 @@ public class TicketDBRepository implements TicketRepository{
 
     private final static Logger logger = LogManager.getLogger(TicketDBRepository.class);
     private JdbcUtils dbUtils;
-    private FlightRepository flightRepository;
 
-    public TicketDBRepository(FlightRepository flightRepository){
+    public TicketDBRepository(){
         logger.info("creating TicketDBRepository");
         this.dbUtils = new JdbcUtils();
-        this.flightRepository = flightRepository;
     }
 
     @Override
@@ -85,18 +83,12 @@ public class TicketDBRepository implements TicketRepository{
         logger.traceEntry("finding ticket with id {}", id);
         try(Connection connection = dbUtils.getConnection();
             PreparedStatement findStmt = connection
-                    .prepareStatement("select * from Tickets where id = ?")) {
+                    .prepareStatement("select * from Tickets T inner join Flights F " +
+                            "on T.FlightID = F.id where id = ?")) {
             findStmt.setInt(1,id);
             ResultSet resultSet = findStmt.executeQuery();
             if(resultSet.next()){
-                String customerName = resultSet.getString("customerName");
-                String touristName = resultSet.getString("touristName");
-                String customerAddress = resultSet.getString("customerAddress");
-                Integer seats = resultSet.getInt("seats");
-                Integer flightID = resultSet.getInt("FlightID");
-                Flight flight = flightRepository.findByID(flightID);
-
-                Ticket ticket = new Ticket(id,customerName,touristName,customerAddress,seats,flight);
+                Ticket ticket = buildTicket(resultSet);;
                 return ticket;
             }
         } catch (SQLException e) {
@@ -111,18 +103,11 @@ public class TicketDBRepository implements TicketRepository{
         logger.traceEntry("find all tickets");
         List<Ticket> ticketList = new ArrayList<>();
         try(Connection connection = dbUtils.getConnection();
-            PreparedStatement selectStmt = connection.prepareStatement("select * from Tickets")) {
+            PreparedStatement selectStmt = connection
+                    .prepareStatement("select * from Tickets T inner join Flights F on T.FlightID = F.id")) {
             ResultSet resultSet = selectStmt.executeQuery();
             while (resultSet.next()){
-                Integer id = resultSet.getInt("id");
-                String customerName = resultSet.getString("customerName");
-                String touristName = resultSet.getString("touristName");
-                String customerAddress = resultSet.getString("customerAddress");
-                Integer seats = resultSet.getInt("seats");
-                Integer flightID = resultSet.getInt("FlightID");
-                Flight flight = flightRepository.findByID(flightID);
-
-                Ticket ticket = new Ticket(id,customerName,touristName,customerAddress,seats,flight);
+                Ticket ticket = buildTicket(resultSet);
                 ticketList.add(ticket);
             }
         } catch (SQLException e) {
@@ -138,18 +123,11 @@ public class TicketDBRepository implements TicketRepository{
         logger.traceEntry("get all tickets");
         List<Ticket> ticketList = new ArrayList<>();
         try(Connection connection = dbUtils.getConnection();
-            PreparedStatement selectStmt = connection.prepareStatement("select * from Tickets")) {
+            PreparedStatement selectStmt = connection
+                    .prepareStatement("select * from Tickets T inner join Flights F on T.FlightID = F.id")) {
             ResultSet resultSet = selectStmt.executeQuery();
             while (resultSet.next()){
-                Integer id = resultSet.getInt("id");
-                String customerName = resultSet.getString("customerName");
-                String touristName = resultSet.getString("touristName");
-                String customerAddress = resultSet.getString("customerAddress");
-                Integer seats = resultSet.getInt("seats");
-                Integer flightID = resultSet.getInt("FlightID");
-                Flight flight = flightRepository.findByID(flightID);
-
-                Ticket ticket = new Ticket(id,customerName,touristName,customerAddress,seats,flight);
+                Ticket ticket = buildTicket(resultSet);
                 ticketList.add(ticket);
             }
         } catch (SQLException e) {
@@ -157,5 +135,22 @@ public class TicketDBRepository implements TicketRepository{
         }
         logger.traceExit();
         return ticketList;
+    }
+
+    private Ticket buildTicket(ResultSet resultSet) throws SQLException {
+        Integer id = resultSet.getInt("id");
+        String customerName = resultSet.getString("customerName");
+        String touristName = resultSet.getString("touristName");
+        String customerAddress = resultSet.getString("customerAddress");
+        Integer seats = resultSet.getInt("seats");
+        Integer flightID = resultSet.getInt("FlightID");
+        String destination = resultSet.getString("destination");
+        LocalDateTime departure = resultSet.getTimestamp("departure").toLocalDateTime();
+        String airport = resultSet.getString("airport");
+        Integer availableSeats = resultSet.getInt("availableSeats");
+
+        Flight flight = new Flight(flightID,destination,departure,airport,availableSeats);
+        Ticket ticket = new Ticket(id,customerName,touristName,customerAddress,seats,flight);
+        return ticket;
     }
 }

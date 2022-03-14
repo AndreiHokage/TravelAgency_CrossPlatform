@@ -15,14 +15,15 @@ namespace ProiectCS
  
             FlightRepository flightRepository = new FlightDBRepository(props);
             TicketRepository ticketRepository = new TicketDBRepository(props);
-            Flight flight = new Flight("Warsaw", DateTime.Now, "Cluj Napoca International", 45);
+            Flight flight = new Flight("Roma", DateTime.Now, "Traian Vuia", 25);
             //flightRepository.Save(flight);
-            //Flight flightUpdate = new Flight("Poland", DateTime.Now, "Cluj Napoca International", 90);
-            //flightRepository.Update(flightUpdate,3);
+            Flight flightUpdate = new Flight("Roma", DateTime.Now, "Cluj Napoca International", 30);
+            //flightRepository.Update(flightUpdate,4);
 
-            //flight.ID = 3;
-            //Ticket ticket = new Ticket("Andrei", "Cristi;Andrei;Laur", "Neamt", 4, flight);
-            //ticketRepository.Save(ticket);
+        
+            Ticket ticket = new Ticket("Barbuta", "Cristi;Andrei;Laur;Mihhaela", "Bacau", 5, flight);
+    
+         
 
             /*Flight flightDublin = flightRepository.FindById(1);
             Ticket ticketDublin = new Ticket("Razvan", "Octav;Dochita", "Suceava", 3, flightDublin);
@@ -33,7 +34,7 @@ namespace ProiectCS
                 Console.WriteLine(objG);
             }
     
-            Console.WriteLine(ticketRepository.FindById(4));
+            Console.WriteLine(ticketRepository.FindById(5));
             foreach (var objG in ticketRepository.FindAll())
             {
                 Console.WriteLine(objG);

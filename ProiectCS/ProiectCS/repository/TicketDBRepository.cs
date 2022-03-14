@@ -97,7 +97,7 @@ namespace NET.repository
             using (var connection = new NpgsqlConnection(props["ConnectionString"]))
             {
                 connection.Open();
-                using (var findStmt = new NpgsqlCommand("select * from Tickets  T inner join Flights  F on T.Flightid = F.id where T.id = @id", connection))
+                using (var findStmt = new NpgsqlCommand("select * from Tickets T inner join Flights  F on T.Flightid = F.id where T.id = @id", connection))
                 {
                     findStmt.Parameters.AddWithValue("@id", ID);
                     using (var dataR = findStmt.ExecuteReader())

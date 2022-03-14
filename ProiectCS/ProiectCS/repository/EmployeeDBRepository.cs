@@ -23,7 +23,7 @@ namespace NET.repository
             using (var connection = new NpgsqlConnection(props["ConnectionString"]))
             {
                 connection.Open();
-                using (var saveStmt = new NpgsqlCommand("insert into Employee(username,password) values (@username,@password)"))
+                using (var saveStmt = new NpgsqlCommand("insert into Employee(username,password) values (@username,@password)", connection))
                 {
                     saveStmt.Parameters.AddWithValue("@username", elem.Username);
                     saveStmt.Parameters.AddWithValue("@password", elem.Password);
@@ -49,7 +49,7 @@ namespace NET.repository
             {
                 connection.Open();
                 using (var updateStmt = new NpgsqlCommand("update Employee set username = @username, password = @password" +
-                                                          "where id = @id"))
+                                                          "where id = @id", connection))
                 {
                     updateStmt.Parameters.AddWithValue("@username", elem.Username);
                     updateStmt.Parameters.AddWithValue("@password", elem.Password);

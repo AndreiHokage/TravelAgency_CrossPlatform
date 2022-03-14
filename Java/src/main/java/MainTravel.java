@@ -21,7 +21,7 @@ public class MainTravel {
         }
 
         FlightRepository flightRepository = new FlightDBRepository();
-        TicketRepository ticketRepository = new TicketDBRepository(flightRepository);
+        TicketRepository ticketRepository = new TicketDBRepository();
         Flight flight = new Flight("Dublin", LocalDateTime.now(),"Arad International Airport",48);
         Flight flight2 = new Flight("London", LocalDateTime.now(),"Bacau International Airport",60);
         //flightRepository.add(flight);

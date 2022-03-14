@@ -27,7 +27,7 @@ namespace NET.repository
             {
                 connection.Open();
                 using (var insertStmt = new NpgsqlCommand("insert into Flights(destination, departure, airport, availableSeats) values " +
-                                                          "(@destination, @departure, @airport, @availableSeats, connection)"))
+                                                          "(@destination, @departure, @airport, @availableSeats)", connection))
                 {
                     insertStmt.Parameters.AddWithValue("@destination", elem.Destination);
                     insertStmt.Parameters.AddWithValue("@departure", elem.Departure);
@@ -50,7 +50,7 @@ namespace NET.repository
             using (var connection =  new NpgsqlConnection(props["ConnectionString"]))
             {
                 connection.Open();
-                using (var deleteStmt = new NpgsqlCommand("delete from Flights where id = @id, connection"))
+                using (var deleteStmt = new NpgsqlCommand("delete from Flights where id = @id, connection", connection))
                 {
                     deleteStmt.Parameters.AddWithValue("@id", elem.ID);
                     var result = deleteStmt.ExecuteNonQuery();
