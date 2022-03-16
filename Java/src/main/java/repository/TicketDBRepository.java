@@ -19,10 +19,12 @@ public class TicketDBRepository implements TicketRepository{
 
     private final static Logger logger = LogManager.getLogger(TicketDBRepository.class);
     private JdbcUtils dbUtils;
+    private FlightRepository flightRepository;
 
-    public TicketDBRepository(){
+    public TicketDBRepository(FlightRepository flightRepository){
         logger.info("creating TicketDBRepository");
         this.dbUtils = new JdbcUtils();
+        this.flightRepository = flightRepository;
     }
 
     @Override
@@ -144,12 +146,8 @@ public class TicketDBRepository implements TicketRepository{
         String customerAddress = resultSet.getString("customerAddress");
         Integer seats = resultSet.getInt("seats");
         Integer flightID = resultSet.getInt("FlightID");
-        String destination = resultSet.getString("destination");
-        LocalDateTime departure = resultSet.getTimestamp("departure").toLocalDateTime();
-        String airport = resultSet.getString("airport");
-        Integer availableSeats = resultSet.getInt("availableSeats");
 
-        Flight flight = new Flight(flightID,destination,departure,airport,availableSeats);
+        Flight flight = flightRepository.findByID(flightID);
         Ticket ticket = new Ticket(id,customerName,touristName,customerAddress,seats,flight);
         return ticket;
     }

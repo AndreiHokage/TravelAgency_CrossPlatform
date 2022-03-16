@@ -1,0 +1,12 @@
+﻿2022-03-16 16:13:19,250 [1] INFO  FlightDBRepository [(null)] - Creating FlightDBRepository
+2022-03-16 16:13:19,266 [1] INFO  TicketDBRepository [(null)] - Creating TicketDBRepository
+2022-03-16 16:13:19,278 [1] INFO  FlightDBRepository [(null)] - finding flight with id 1
+2022-03-16 16:13:19,591 [1] INFO  FlightDBRepository [(null)] - finding flight 1;Dublin;3/13/2022 8:04:50 PM;Arad International Airport;48 with id 1
+2022-03-16 16:13:19,604 [1] INFO  FlightDBRepository [(null)] - finding all flights
+2022-03-16 16:13:19,606 [1] INFO  FlightDBRepository [(null)] - return all found flights
+2022-03-16 16:13:19,608 [1] INFO  TicketDBRepository [(null)] - finding all tickets
+2022-03-16 16:13:19,610 [1] INFO  FlightDBRepository [(null)] - finding flight with id 4
+2022-03-16 16:13:19,651 [1] INFO  FlightDBRepository [(null)] - finding flight 4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;30 with id 4
+2022-03-16 16:13:19,651 [1] INFO  FlightDBRepository [(null)] - finding flight with id 1
+2022-03-16 16:13:19,651 [1] INFO  FlightDBRepository [(null)] - finding flight 1;Dublin;3/13/2022 8:04:50 PM;Arad International Airport;48 with id 1
+2022-03-16 16:13:19,652 [1] INFO  TicketDBRepository [(null)] - return all found tickets

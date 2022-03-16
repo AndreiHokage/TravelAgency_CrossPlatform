@@ -13,10 +13,13 @@ namespace NET.repository
         
         private IDictionary<string, string> props;
 
-        public TicketDBRepository(IDictionary<string, string> props)
+        private FlightRepository flightRepository;
+
+        public TicketDBRepository(IDictionary<string, string> props, FlightRepository flightRepository)
         {
-            log.Info("Creating TiketDBRepository");
+            log.Info("Creating TicketDBRepository");
             this.props = props;
+            this.flightRepository = flightRepository;
         }
 
         public void Save(Ticket elem)
@@ -108,13 +111,9 @@ namespace NET.repository
                             string touristName = dataR.GetString(2);
                             string customerAddress = dataR.GetString(3);
                             int seats = dataR.GetInt32(4);
-                            int idTicket = dataR.GetInt32(6);
-                            string destination = dataR.GetString(7);
-                            DateTime departure = dataR.GetDateTime(8);
-                            string airport = dataR.GetString(9);
-                            int availableSeats = dataR.GetInt32(10);
+                            int FlightID = dataR.GetInt32(5);
 
-                            Flight flight = new Flight(idTicket, destination, departure, airport, availableSeats);
+                            Flight flight = flightRepository.FindById(FlightID);
                             Ticket ticket = new Ticket(ID, customerName, touristName, customerAddress, seats, flight);
                             log.InfoFormat("ticket with id {0} has been found {1}", ID, ticket);
                             return ticket;
@@ -145,13 +144,9 @@ namespace NET.repository
                             string touristName = dataR.GetString(2);
                             string customerAddress = dataR.GetString(3);
                             int seats = dataR.GetInt32(4);
-                            int idTicket = dataR.GetInt32(6);
-                            string destination = dataR.GetString(7);
-                            DateTime departure = dataR.GetDateTime(8);
-                            string airport = dataR.GetString(9);
-                            int availableSeats = dataR.GetInt32(10);
+                            int FlightID = dataR.GetInt32(5);
 
-                            Flight flight = new Flight(idTicket, destination, departure, airport, availableSeats);
+                            Flight flight = flightRepository.FindById(FlightID);
                             Ticket ticket = new Ticket(ID, customerName, touristName, customerAddress, seats, flight);
                             tickets.Add(ticket);
                         }

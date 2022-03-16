@@ -1,0 +1,8 @@
+﻿2022-03-14 21:25:54,713 [1] INFO  FlightDBRepository [(null)] - Creating FlightDBRepository
+2022-03-14 21:25:54,729 [1] INFO  TicketDBRepository [(null)] - Creating TiketDBRepository
+2022-03-14 21:25:54,740 [1] INFO  FlightDBRepository [(null)] - finding all flights
+2022-03-14 21:25:55,058 [1] INFO  FlightDBRepository [(null)] - return all found flights
+2022-03-14 21:25:55,061 [1] INFO  TicketDBRepository [(null)] - finding ticket with ID 5
+2022-03-14 21:25:55,074 [1] INFO  TicketDBRepository [(null)] - ticket with id 5 has been found ID= 5 ;CustomerName= Barbuta ;TouristName= Cristi;Andrei;Laur;Mihhaela ;CustomerAddress= Bacau;Seats= 5 ;Flight={4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;30 }
+2022-03-14 21:25:55,078 [1] INFO  TicketDBRepository [(null)] - finding all tickets
+2022-03-14 21:25:55,079 [1] INFO  TicketDBRepository [(null)] - return all found tickets

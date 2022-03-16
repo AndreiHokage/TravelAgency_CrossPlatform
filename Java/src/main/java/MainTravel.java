@@ -21,21 +21,9 @@ public class MainTravel {
         }
 
         FlightRepository flightRepository = new FlightDBRepository();
-        TicketRepository ticketRepository = new TicketDBRepository();
-        Flight flight = new Flight("Dublin", LocalDateTime.now(),"Arad International Airport",48);
-        Flight flight2 = new Flight("London", LocalDateTime.now(),"Bacau International Airport",60);
-        //flightRepository.add(flight);
-        //flightRepository.add(flight2);
-        flight2.setID(2);
-        Ticket ticket = new Ticket("Andrei","Maria;Alin","Barrow St",3,flight2);
-        //ticketRepository.add(ticket);
-        //ticket.setID(1);
-        //ticketRepository.delete(ticket);
-        Ticket ticket2 = new Ticket("Andrei","Maria;Angela","Barrow St",3,flight2);
-       //ticketRepository.update(ticket2,1);
-        //ticket2.setID(3);
-       // ticketRepository.delete(ticket2);
-       //flightRepository.delete(flight2);
+        TicketRepository ticketRepository = new TicketDBRepository(flightRepository);
+        Flight flight = new Flight("Trucia",LocalDateTime.now(),"Suceava airport",18);
+       // flightRepository.add(flight);
 
 
         flightRepository.findAll().forEach(System.out::println);
