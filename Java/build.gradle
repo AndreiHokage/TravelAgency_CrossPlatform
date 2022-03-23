@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
 group 'ro.ubbcluj.mpp'
@@ -14,7 +15,25 @@ application{
     mainClass = 'MainTravel'
 }
 
+javafx {
+    version = '17-ea+11'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
 dependencies {
+
+    implementation 'no.tornado:tornadofx-controls:1.0.3'
+
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-controls
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: '17-ea+11'
+
+
+    implementation('org.controlsfx:controlsfx:11.1.1')
+    implementation('com.dlsc.formsfx:formsfx-core:11.5.0') {
+        exclude(group: 'org.openjfx')
+    }
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
 
@@ -23,10 +42,11 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
+    implementation "de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2"
 
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 jar {

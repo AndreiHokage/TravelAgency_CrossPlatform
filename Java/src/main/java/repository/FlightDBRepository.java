@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -139,6 +140,63 @@ public class FlightDBRepository implements FlightRepository{
             }
         } catch (SQLException e) {
             logger.error(e);
+        }
+        logger.traceExit();
+        return flightList;
+    }
+
+    @Override
+    public Collection<Flight> filterFlightByDestinationAndDeparture(String destination, LocalDate departure) {
+        logger.traceEntry("filter Flights by destination and departure date");
+        List<Flight> flightList = new ArrayList<>();
+        try(Connection connection = dbUtils.getConnection();
+            PreparedStatement filterStmt = connection
+                    .prepareStatement("select * from Flights where availableSeats > 0 and destination = ? and " +
+                            "(SELECT EXTRACT(YEAR FROM departure))= ? and" +
+                            "(SELECT EXTRACT(MONTH FROM departure))= ? and" +
+                            "(SELECT EXTRACT(DAY FROM departure))= ?")) {
+            filterStmt.setString(1,destination);
+            filterStmt.setInt(2,departure.getYear());
+            filterStmt.setInt(3,departure.getMonthValue());
+            filterStmt.setInt(4,departure.getDayOfMonth());
+            ResultSet resultSet = filterStmt.executeQuery();
+            while (resultSet.next()){
+                Integer id = resultSet.getInt("id");
+                String destinationSQL = resultSet.getString("destination");
+                LocalDateTime departureSQL = resultSet.getTimestamp("departure").toLocalDateTime();
+                String airport = resultSet.getString("airport");
+                Integer availableSeats = resultSet.getInt("availableSeats");
+
+                Flight flight = new Flight(id, destinationSQL, departureSQL, airport, availableSeats);
+                flightList.add(flight);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        logger.traceExit();
+        return flightList;
+    }
+
+    @Override
+    public Collection<Flight> filterFlightByAvailableSeats() {
+        logger.traceEntry("get flights that have availableSeats greater than 0");
+        List<Flight> flightList = new ArrayList<>();
+        try(Connection connection = dbUtils.getConnection();
+            PreparedStatement filterStmt = connection
+                    .prepareStatement("select * from Flights where availableSeats > 0")) {
+            ResultSet resultSet = filterStmt.executeQuery();
+            while (resultSet.next()){
+                Integer id = resultSet.getInt("id");
+                String destination = resultSet.getString("destination");
+                LocalDateTime departure = resultSet.getTimestamp("departure").toLocalDateTime();
+                String airport = resultSet.getString("airport");
+                Integer availableSeats = resultSet.getInt("availableSeats");
+
+                Flight flight = new Flight(id, destination, departure, airport, availableSeats);
+                flightList.add(flight);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         logger.traceExit();
         return flightList;

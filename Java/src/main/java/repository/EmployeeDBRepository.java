@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
 
@@ -16,6 +17,7 @@ public class EmployeeDBRepository implements EmployeeRepository{
 
     public EmployeeDBRepository(){
         logger.info("creating EmployeeDBRepository");
+        dbUtils = new JdbcUtils();
     }
 
     @Override
@@ -67,5 +69,22 @@ public class EmployeeDBRepository implements EmployeeRepository{
     @Override
     public Collection<Employee> getAll() {
         return null;
+    }
+
+    @Override
+    public boolean filterByUsernameAndPassword(String username, String password) {
+        logger.traceEntry("filter by username and password");
+        try(Connection connection = dbUtils.getConnection();
+            PreparedStatement filterStmt = connection
+                    .prepareStatement("select * from Employee where username = ? and password = ?")) {
+            filterStmt.setString(1,username);
+            filterStmt.setString(2,password);
+            ResultSet resultSet = filterStmt.executeQuery();
+            return resultSet.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        logger.traceExit();
+        return false;
     }
 }

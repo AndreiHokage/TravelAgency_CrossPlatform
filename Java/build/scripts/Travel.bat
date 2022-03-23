@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\Travel-1.0.jar;%APP_HOME%\lib\log4j-core-2.17.2.jar;%APP_HOME%\lib\log4j-api-2.17.2.jar;%APP_HOME%\lib\sqlite-jdbc-3.36.0.3.jar
+set CLASSPATH=%APP_HOME%\lib\Travel-1.0.jar;%APP_HOME%\lib\javafx-fxml-17-ea+11-win.jar;%APP_HOME%\lib\javafx-controls-17-ea+11-win.jar;%APP_HOME%\lib\javafx-controls-17-ea+11.jar;%APP_HOME%\lib\javafx-graphics-17-ea+11-win.jar;%APP_HOME%\lib\javafx-graphics-17-ea+11.jar;%APP_HOME%\lib\javafx-base-17-ea+11-win.jar;%APP_HOME%\lib\javafx-base-17-ea+11.jar;%APP_HOME%\lib\controlsfx-11.1.0.jar;%APP_HOME%\lib\formsfx-core-11.3.2.jar;%APP_HOME%\lib\bootstrapfx-core-0.4.0.jar;%APP_HOME%\lib\log4j-core-2.17.2.jar;%APP_HOME%\lib\log4j-api-2.17.2.jar;%APP_HOME%\lib\postgresql-42.3.3.jar;%APP_HOME%\lib\checker-qual-3.5.0.jar
 
 
 @rem Execute Travel

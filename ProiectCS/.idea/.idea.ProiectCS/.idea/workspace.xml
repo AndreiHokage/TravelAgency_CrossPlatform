@@ -6,28 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd604d45-861f-4246-8b65-80896acae588" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/build/classes/java/main/MainTravel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/classes/java/main/MainTravel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/build/classes/java/main/repository/TicketDBRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/classes/java/main/repository/TicketDBRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/src/main/java/MainTravel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/main/java/MainTravel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/src/main/java/repository/TicketDBRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/main/java/repository/TicketDBRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/target/travelLogs.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/target/travelLogs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/ProiectCS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/ProiectCS.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/bin/Debug/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/TicketDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/repository/TicketDBRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +99,8 @@
       <workItem from="1647262223229" duration="5736000" />
       <workItem from="1647282254183" duration="3246000" />
       <workItem from="1647328785664" duration="2208000" />
-      <workItem from="1647439646409" duration="944000" />
+      <workItem from="1647439646409" duration="2237000" />
+      <workItem from="1647457217661" duration="945000" />
     </task>
     <servers />
   </component>
