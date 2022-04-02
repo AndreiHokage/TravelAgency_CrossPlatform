@@ -54,15 +54,18 @@ public class TicketController {
         String customerName = textFieldCustomerName.getText();
         String touristName = textFieldTouristName.getText();
         String customerAddress = textFieldCustomerAddress.getText();
-        Integer seats = Integer.valueOf(textFieldSeats.getText());
 
         try {
+            Integer seats = Integer.valueOf(textFieldSeats.getText());
             ticketServices.addTicket(customerName, touristName, customerAddress, seats, flightForTicket);
             MessageAlert.showMessage(mainStage, Alert.AlertType.INFORMATION,"Sold","The ticket has been bought succesfully !");
             mainStage.close();
         }
         catch(ValidationException validationException){
            MessageAlert.showErrorMessage(mainStage, validationException.getMessage());
+        }
+        catch(Exception ex){
+            MessageAlert.showErrorMessage(mainStage, ex.getMessage());
         }
     }
 }

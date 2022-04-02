@@ -14,5 +14,6 @@ namespace NET.repository
         T FindById(TID ID);
 
         IEnumerable<T> FindAll();
+        
     }
 }

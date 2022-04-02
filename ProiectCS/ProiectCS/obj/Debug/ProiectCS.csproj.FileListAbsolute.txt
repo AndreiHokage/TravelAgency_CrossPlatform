@@ -38,3 +38,7 @@ D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.csproj.
 D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.csproj.CopyComplete
 D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.exe
 D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.Form1.resources
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.csproj.GenerateResource.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.TravelController.resources
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\ProiectCS\obj\Debug\ProiectCS.TicketController.resources

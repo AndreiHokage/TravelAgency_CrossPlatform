@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Web.UI.WebControls;
@@ -143,6 +144,71 @@ namespace NET.repository
             }
             log.Info("return all found flights");
             return flights;
+        }
+
+        public IEnumerable<Flight> filterFlightByDestinationAndDeparture(string destination, DateTime departure)
+        {
+            log.Info("findall filtered flights by destination and departure");
+            IList<Flight> filteredFlights = new List<Flight>();
+            using (var connection = new NpgsqlConnection(props["ConnectionString"]))
+            {
+                connection.Open();
+                using (var filterStmt = new NpgsqlCommand(
+                           "select * from Flights where availableSeats > 0 and destination = @dt and " +
+                           "(SELECT EXTRACT(YEAR FROM departure))= @year and" +
+                           "(SELECT EXTRACT(MONTH FROM departure))= @month and" +
+                           "(SELECT EXTRACT(DAY FROM departure))= @day ", connection))
+                {
+                    filterStmt.Parameters.AddWithValue("@dt", destination);
+                    filterStmt.Parameters.AddWithValue("@year", departure.Year);
+                    filterStmt.Parameters.AddWithValue("@month", departure.Month);
+                    filterStmt.Parameters.AddWithValue("@day", departure.Day);
+                    using (var dataR = filterStmt.ExecuteReader())
+                    {
+                        while (dataR.Read())
+                        {
+                            int id = dataR.GetInt32(0);
+                            string destinationR = dataR.GetString(1);
+                            DateTime departureR = dataR.GetDateTime(2);
+                            string airport = dataR.GetString(3);
+                            int availableSeats = dataR.GetInt32(4);
+                            Flight flight = new Flight(id, destinationR, departureR, airport, availableSeats);
+                            filteredFlights.Add(flight);
+                        }
+                    }
+                 
+                }
+            }
+            log.Info("getting all filtered flights by destination and departure");
+            return filteredFlights;
+        }
+
+        public IEnumerable<Flight> filterFlightByAvailableSeats()
+        {
+            log.Info("find all flights with available seats");
+            IList<Flight> filteredFlights = new List<Flight>();
+            using (var connecton = new NpgsqlConnection(props["ConnectionString"]))
+            {
+                connecton.Open();
+                using (var filteredStmt = new NpgsqlCommand("select * from Flights where availableSeats > 0", connecton))
+                {
+                    using (var dataR = filteredStmt.ExecuteReader())
+                    {
+                        while (dataR.Read())
+                        {
+                            int id = dataR.GetInt32(0);
+                            string destination = dataR.GetString(1);
+                            DateTime departure = dataR.GetDateTime(2);
+                            string airport = dataR.GetString(3);
+                            int availableSeats = dataR.GetInt32(4);
+                            Flight flight = new Flight(id, destination, departure, airport, availableSeats);
+                            filteredFlights.Add(flight);
+                        }
+                    }
+                }
+            }
+            log.Info("getting all filtered flights by available Seats");
+            return filteredFlights;
         }
     }
 }

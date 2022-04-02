@@ -6,7 +6,7 @@ public class TicketValidator implements Validator<Ticket> {
     @Override
     public void validate(Ticket entity) throws ValidationException {
         String msg = "";
-        if(entity.getCustomerAddress().equals(""))
+        if(entity.getCustomerName().equals(""))
             msg += "The customer's name cannot be empty !";
         if(entity.getTouristName().equals(""))
             msg += "The tourist's name cannot be empty !";

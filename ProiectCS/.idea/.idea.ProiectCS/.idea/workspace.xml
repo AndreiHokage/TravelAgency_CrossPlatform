@@ -6,7 +6,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd604d45-861f-4246-8b65-80896acae588" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/build/classes/java/main/controllers/TicketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/classes/java/main/controllers/TicketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/build/classes/java/main/model/validators/TicketValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/classes/java/main/model/validators/TicketValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/build/classes/java/main/services/TicketServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/classes/java/main/services/TicketServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/main/java/controllers/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/main/java/controllers/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/main/java/model/validators/TicketValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/main/java/model/validators/TicketValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/main/java/services/TicketServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/main/java/services/TicketServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/ProiectCS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/ProiectCS.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/target/travelLogs.log" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/bin/Debug/target/travelLogs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/EmployeeDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/repository/EmployeeDBRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/repository/EmployeeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/FlightDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/repository/FlightDBRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/FlightRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/repository/FlightRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/repository/IRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +57,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/bd/27c0063e/GCHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/b3/9d29a978/Stack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc1d04d811fc4873ab7d8d9d4daddcc9568788/26/329b4980/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,7 +76,10 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowDesigner Toolbox.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.ProiectCS">
@@ -101,6 +138,16 @@
       <workItem from="1647328785664" duration="2208000" />
       <workItem from="1647439646409" duration="2237000" />
       <workItem from="1647457217661" duration="945000" />
+      <workItem from="1648061214513" duration="6657000" />
+      <workItem from="1648114604186" duration="10157000" />
+      <workItem from="1648136155138" duration="1146000" />
+      <workItem from="1648137463166" duration="5794000" />
+      <workItem from="1648209998449" duration="520000" />
+      <workItem from="1648211303809" duration="106000" />
+      <workItem from="1648490511165" duration="512000" />
+      <workItem from="1648492563903" duration="5455000" />
+      <workItem from="1648534967448" duration="1130000" />
+      <workItem from="1648536422867" duration="258000" />
     </task>
     <servers />
   </component>
@@ -123,5 +170,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

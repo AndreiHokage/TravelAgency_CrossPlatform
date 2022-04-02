@@ -74,5 +74,25 @@ namespace NET.repository
         {
             throw new System.NotImplementedException();
         }
+
+        public bool filterByUsernameAndPassword(string username, string password)
+        {
+            log.Info("filter by username and password");
+            using (var connection = new NpgsqlConnection(props["ConnectionString"]))
+            {
+                connection.Open();
+                using (var filterStmt = new NpgsqlCommand(
+                           "select * from Employee where username = @us and password = @ps", connection))
+                {
+                    filterStmt.Parameters.AddWithValue("@us", username);
+                    filterStmt.Parameters.AddWithValue("@ps", password);
+                    using (var dataR = filterStmt.ExecuteReader())
+                    {
+                        log.Info("Exit");
+                        return dataR.Read();
+                    }
+                }
+            }
+        }
     }
 }

@@ -20,12 +20,12 @@ public class TicketServices {
     }
 
     public void addTicket(String customerName, String touristName, String customerAddress, Integer seats, Flight flight){
-        flightServices.updateFlight(flight.getDestination(), flight.getDeparture(),
-                flight.getAirport(), flight.getAvailableSeats() - seats, flight.getID());
-
         Flight flightForTicket = flightServices.findFlightByID(flight.getID());
         Ticket saveTicket = new Ticket(customerName,touristName,customerAddress,seats,flightForTicket);
         ticketValidator.validate(saveTicket);
+
+        flightServices.updateFlight(flight.getDestination(), flight.getDeparture(),
+                flight.getAirport(), flight.getAvailableSeats() - seats, flight.getID());
         ticketRepository.add(saveTicket);
     }
 

@@ -1,12 +1,15 @@
-﻿2022-03-16 16:26:06,804 [1] INFO  FlightDBRepository [(null)] - Creating FlightDBRepository
-2022-03-16 16:26:06,821 [1] INFO  TicketDBRepository [(null)] - Creating TicketDBRepository
-2022-03-16 16:26:06,844 [1] INFO  FlightDBRepository [(null)] - finding flight with id 1
-2022-03-16 16:26:07,179 [1] INFO  FlightDBRepository [(null)] - finding flight 1;Dublin;3/13/2022 8:04:50 PM;Arad International Airport;48 with id 1
-2022-03-16 16:26:07,192 [1] INFO  FlightDBRepository [(null)] - finding all flights
-2022-03-16 16:26:07,194 [1] INFO  FlightDBRepository [(null)] - return all found flights
-2022-03-16 16:26:07,196 [1] INFO  TicketDBRepository [(null)] - finding all tickets
-2022-03-16 16:26:07,197 [1] INFO  FlightDBRepository [(null)] - finding flight with id 4
-2022-03-16 16:26:07,238 [1] INFO  FlightDBRepository [(null)] - finding flight 4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;30 with id 4
-2022-03-16 16:26:07,238 [1] INFO  FlightDBRepository [(null)] - finding flight with id 1
-2022-03-16 16:26:07,239 [1] INFO  FlightDBRepository [(null)] - finding flight 1;Dublin;3/13/2022 8:04:50 PM;Arad International Airport;48 with id 1
-2022-03-16 16:26:07,239 [1] INFO  TicketDBRepository [(null)] - return all found tickets
+﻿2022-03-29 09:35:21,576 [1] INFO  FlightDBRepository [(null)] - Creating FlightDBRepository
+2022-03-29 09:35:21,622 [1] INFO  TicketDBRepository [(null)] - Creating TicketDBRepository
+2022-03-29 09:35:21,623 [1] INFO  EmployeeDBRepository [(null)] - Creating EmployeeDBRepository
+2022-03-29 09:35:27,131 [1] INFO  EmployeeDBRepository [(null)] - filter by username and password
+2022-03-29 09:35:27,843 [1] INFO  EmployeeDBRepository [(null)] - Exit
+2022-03-29 09:35:27,957 [1] INFO  FlightDBRepository [(null)] - finding all flights
+2022-03-29 09:35:28,008 [1] INFO  FlightDBRepository [(null)] - return all found flights
+2022-03-29 09:35:39,402 [1] INFO  FlightDBRepository [(null)] - findall filtered flights by destination and departure
+2022-03-29 09:35:39,426 [1] INFO  FlightDBRepository [(null)] - getting all filtered flights by destination and departure
+2022-03-29 09:36:05,188 [1] INFO  FlightDBRepository [(null)] - finding flight with id 4
+2022-03-29 09:36:05,196 [1] INFO  FlightDBRepository [(null)] - finding flight 4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;25 with id 4
+2022-03-29 09:36:05,202 [1] INFO  FlightDBRepository [(null)] - updating flight 4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;23 with ID 4
+2022-03-29 09:36:05,237 [1] INFO  FlightDBRepository [(null)] - flight has been updating 4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;23 with ID 4
+2022-03-29 09:36:05,239 [1] INFO  TicketDBRepository [(null)] - saving ticket ID= 0 ;CustomerName= Mihaela ;TouristName= Andra ;CustomerAddress= StefanCelMare;Seats= 2 ;Flight={4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;25 }
+2022-03-29 09:36:05,249 [1] INFO  TicketDBRepository [(null)] - ticket has been added ID= 0 ;CustomerName= Mihaela ;TouristName= Andra ;CustomerAddress= StefanCelMare;Seats= 2 ;Flight={4;Roma;3/14/2022 5:41:35 PM;Cluj Napoca International;25 }
