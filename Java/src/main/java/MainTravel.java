@@ -1,5 +1,4 @@
 import controllers.LogInController;
-import controllers.TravelController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,14 +7,12 @@ import model.Flight;
 import model.Ticket;
 import model.validators.FlightValidator;
 import model.validators.TicketValidator;
-import repository.*;
 import services.EmployeeServices;
 import services.FlightServices;
 import services.TicketServices;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Properties;
 
 public class MainTravel extends Application {

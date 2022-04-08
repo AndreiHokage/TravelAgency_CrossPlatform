@@ -1,2 +1,8 @@
 rootProject.name = 'Travel'
+include 'TravelModel'
+include 'TravelClientFX'
+include 'TravelServices'
+include 'TravelNetworking'
+include 'TravelPersistence'
+include 'TravelServer'
 
