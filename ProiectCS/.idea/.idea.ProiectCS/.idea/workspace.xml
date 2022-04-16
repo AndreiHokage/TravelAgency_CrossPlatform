@@ -17,104 +17,7 @@
     <projectFile>travelServer/travelServer.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd604d45-861f-4246-8b65-80896acae588" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/travelPersistence/travelPersistence.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelClientFX/build/classes/java/main/travel/client/TicketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelClientFX/build/classes/java/main/travel/client/TicketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelClientFX/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelClientFX/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelClientFX/src/main/java/travel/client/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelClientFX/src/main/java/travel/client/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/ResponseType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/ResponseType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/TravelClientRpcReflectionWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/TravelClientRpcReflectionWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/TravelServicesRpcProxy$ReaderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/TravelServicesRpcProxy$ReaderThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/TravelServicesRpcProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/classes/java/main/chat/network/TravelServicesRpcProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/libs/TravelNetworking-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/libs/TravelNetworking-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/src/main/java/chat/network/ResponseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/src/main/java/chat/network/ResponseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/src/main/java/chat/network/TravelClientRpcReflectionWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/src/main/java/chat/network/TravelClientRpcReflectionWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/src/main/java/chat/network/TravelServicesRpcProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/src/main/java/chat/network/TravelServicesRpcProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/src/main/java/travel/server/TravelServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/src/main/java/travel/server/TravelServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/ProiectCS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/ProiectCS.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Microsoft.Bcl.AsyncInterfaces.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Microsoft.Bcl.HashCode.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Microsoft.Bcl.HashCode.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Microsoft.Extensions.Logging.Abstractions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Npgsql.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/Npgsql.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/ProiectCS.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Collections.Immutable.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Collections.Immutable.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Diagnostics.DiagnosticSource.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Memory.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Numerics.Vectors.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Numerics.Vectors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Text.Encodings.Web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Text.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Threading.Channels.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Threading.Channels.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.Threading.Tasks.Extensions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.ValueTuple.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/System.ValueTuple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/log4net.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/bin/Debug/log4net.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/controllers/LogInController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/LogInController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/controllers/LogInController.resx" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/LogInController.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/controllers/TicketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/TicketController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/controllers/TicketController.resx" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/TicketController.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/controllers/TravelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/TravelController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/controllers/TravelController.resx" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/TravelController.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/Employee.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/Flight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/Flight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/IIdentifiable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/IIdentifiable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/Ticket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/Ticket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/validators/FlightValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/validators/FlightValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/validators/TicketValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/validators/TicketValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/validators/ValidationException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/validators/ValidationException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/model/validators/Validator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/validators/Validator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.Form1.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.TicketController.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.TravelController.resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csproj.GenerateResource.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/obj/Debug/ProiectCS.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/DbUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/DbUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/EmployeeDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/EmployeeDBRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/EmployeeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/FlightDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/FlightDBRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/FlightRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/FlightRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/IRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/TicketDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/TicketDBRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/repository/TicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelPersistence/TicketRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/services/EmployeeServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelServer/services/EmployeeServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/services/FlightServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelServer/services/FlightServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectCS/services/TicketServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/travelServer/services/TicketServices.cs" afterDir="false" />
-    </list>
+    <list default="true" id="fd604d45-861f-4246-8b65-80896acae588" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -462,6 +365,7 @@
       <workItem from="1649744488038" duration="752000" />
       <workItem from="1649851423430" duration="596000" />
       <workItem from="1650041121395" duration="521000" />
+      <workItem from="1650092627782" duration="217000" />
     </task>
     <servers />
   </component>
