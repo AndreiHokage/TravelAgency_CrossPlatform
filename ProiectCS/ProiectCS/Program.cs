@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Windows.Forms;
-using log4net.Config;
-using NET.model;
-using NET.repository;
+
 
 namespace ProiectCS
 {

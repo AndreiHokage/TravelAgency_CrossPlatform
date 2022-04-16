@@ -70,7 +70,8 @@ public class TicketController {
 
         try {
             Integer seats = Integer.valueOf(textFieldSeats.getText());
-            Ticket ticket = new Ticket(customerName, touristName, customerAddress, seats, flightForTicket);
+            Flight flight = new Flight(flightForTicket.getID(),flightForTicket.getDestination(),flightForTicket.getDeparture(), flightForTicket.getAirport(), flightForTicket.getAvailableSeats());
+            Ticket ticket = new Ticket(customerName, touristName, customerAddress, seats, flight);
             server.addTicket(ticket);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

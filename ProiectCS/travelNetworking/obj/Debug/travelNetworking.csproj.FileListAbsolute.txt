@@ -1,0 +1,11 @@
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\bin\Debug\travelNetworking.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\bin\Debug\travelNetworking.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\bin\Debug\travelModel.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\bin\Debug\travelServices.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\bin\Debug\travelModel.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\bin\Debug\travelServices.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\obj\Debug\travelNetworking.csprojAssemblyReference.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\obj\Debug\travelNetworking.csproj.CoreCompileInputs.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\obj\Debug\travelNetworking.csproj.CopyComplete
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\obj\Debug\travelNetworking.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelNetworking\obj\Debug\travelNetworking.pdb

@@ -1,0 +1,6 @@
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelModel\bin\Debug\travelModel.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelModel\bin\Debug\travelModel.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelModel\obj\Debug\travelModel.csprojAssemblyReference.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelModel\obj\Debug\travelModel.csproj.CoreCompileInputs.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelModel\obj\Debug\travelModel.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelModel\obj\Debug\travelModel.pdb

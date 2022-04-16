@@ -107,12 +107,17 @@ public class TravelServicesRpcProxy implements ITravelServices {
 
     @Override
     public void addTicket(Ticket ticket) throws TravelException {
+        System.out.println("balanciic " + ticket);
         Request req = new Request.Builder().type(RequestType.BUY_TICKET_TRAVEL).data(ticket).build();
         sendRequest(req);
         Response response = readResponse();
         if(response.type() == ResponseType.ERROR){
             String err = response.data().toString();
             closeConnection();
+            throw new TravelException(err);
+        }
+        if(response.type() == ResponseType.ERROR_UNVAILABLE_SEATS){
+            String err = response.data().toString();
             throw new TravelException(err);
         }
     }

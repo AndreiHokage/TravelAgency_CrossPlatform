@@ -113,30 +113,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="controllers\LogInController.cs" />
-        <Compile Include="controllers\TicketController.cs" />
-        <Compile Include="controllers\TravelController.cs" />
-        <Compile Include="model\Employee.cs" />
-        <Compile Include="model\Flight.cs" />
-        <Compile Include="model\IIdentifiable.cs" />
-        <Compile Include="model\Ticket.cs" />
-        <Compile Include="model\validators\FlightValidator.cs" />
-        <Compile Include="model\validators\TicketValidator.cs" />
-        <Compile Include="model\validators\ValidationException.cs" />
-        <Compile Include="model\validators\Validator.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="repository\DbUtils.cs" />
-        <Compile Include="repository\EmployeeDBRepository.cs" />
-        <Compile Include="repository\EmployeeRepository.cs" />
-        <Compile Include="repository\FlightDBRepository.cs" />
-        <Compile Include="repository\FlightRepository.cs" />
-        <Compile Include="repository\IRepository.cs" />
-        <Compile Include="repository\TicketDBRepository.cs" />
-        <Compile Include="repository\TicketRepository.cs" />
-        <Compile Include="services\EmployeeServices.cs" />
-        <Compile Include="services\FlightServices.cs" />
-        <Compile Include="services\TicketServices.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
@@ -148,15 +126,9 @@
       <Content Include="bin\Debug\target\TTTTT.log" />
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Include="controllers\LogInController.resx">
-        <DependentUpon>LogInController.cs</DependentUpon>
-      </EmbeddedResource>
-      <EmbeddedResource Include="controllers\TicketController.resx">
-        <DependentUpon>TicketController.cs</DependentUpon>
-      </EmbeddedResource>
-      <EmbeddedResource Include="controllers\TravelController.resx">
-        <DependentUpon>TravelController.cs</DependentUpon>
-      </EmbeddedResource>
+      <Folder Include="controllers" />
+      <Folder Include="model" />
+      <Folder Include="repository" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

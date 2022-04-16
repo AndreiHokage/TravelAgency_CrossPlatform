@@ -3,6 +3,7 @@ package chat.network;
 import travel.model.Employee;
 import travel.model.Flight;
 import travel.model.Ticket;
+import travel.model.validators.ValidationException;
 import travel.services.ITravelObserver;
 import travel.services.ITravelServices;
 import travel.services.TravelException;
@@ -168,11 +169,14 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
     private Response handleBUY_TICKET_TRAVEL(Request request){
         System.out.println("savind ticket ...");
         Ticket ticket = (Ticket) request.data();
+        System.out.println("Balancii ai primit " + ticket);
         try{
             server.addTicket(ticket);
             return okResponse;
         } catch (TravelException e) {
             return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+        }catch (ValidationException e) {
+            return new Response.Builder().type(ResponseType.ERROR_UNVAILABLE_SEATS).data(e.getMessage()).build();
         }
     }
 

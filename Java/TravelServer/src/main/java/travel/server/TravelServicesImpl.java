@@ -83,8 +83,8 @@ public class TravelServicesImpl implements ITravelServices {
 
     @Override
     public synchronized void addFlight(Flight flight) throws TravelException {
-        flightRepository.add(flight);
         flightValidator.validate(flight);
+        flightRepository.add(flight);
         notifyEmployeeFlightSave(flight);
     }
 

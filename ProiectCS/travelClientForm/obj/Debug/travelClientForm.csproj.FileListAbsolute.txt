@@ -1,0 +1,17 @@
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelClientForm.exe
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelClientForm.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelModel.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelNetworking.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelServices.dll
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelModel.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelNetworking.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\bin\Debug\travelServices.pdb
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.csprojAssemblyReference.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.LogInController.resources
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.TicketController.resources
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.TravelController.resources
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.csproj.GenerateResource.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.csproj.CoreCompileInputs.cache
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.csproj.CopyComplete
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.exe
+D:\UBB-Didactic\An 2\MPP\Proiect\ProiectCS\travelClientForm\obj\Debug\travelClientForm.pdb
