@@ -1,5 +1,8 @@
 package chat.network;
 
+import chat.network.utils.ProtoUtils;
+import generatedcode.TravelMainRequest;
+import generatedcode.TravelMainResponse;
 import travel.model.Employee;
 import travel.model.Flight;
 import travel.model.Ticket;
@@ -8,9 +11,7 @@ import travel.services.ITravelObserver;
 import travel.services.ITravelServices;
 import travel.services.TravelException;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.Socket;
@@ -21,8 +22,8 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
     private ITravelServices server;
     private Socket connection;
 
-    private ObjectInputStream input;
-    private ObjectOutputStream output;
+    private InputStream input;
+    private OutputStream output;
     private volatile boolean connected;
 
     public TravelClientRpcReflectionWorker(ITravelServices server, Socket connection){
@@ -31,9 +32,9 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
         this.connection = connection;
 
         try {
-            output = new ObjectOutputStream(connection.getOutputStream());
-            output.flush();
-            input = new ObjectInputStream(connection.getInputStream());
+            output = connection.getOutputStream(); //new ObjectOutputStream(connection.getOutputStream());
+            //output.flush();
+            input = connection.getInputStream(); //new ObjectInputStream(connection.getInputStream());//new ObjectInputStream(connection.getInputStream());
             connected = true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,14 +46,12 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
     public void run() {
         while(connected){
             try{
-                Object request = input.readObject();
-                Response response = handleRequest((Request) request);
+                TravelMainRequest request = TravelMainRequest.parseDelimitedFrom(input);
+                TravelMainResponse response = handleRequest(request);
                 if(response != null){
                     sendResponse(response);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
 
@@ -71,7 +70,7 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
 
     @Override
     public void soldTicket(Ticket ticket) throws TravelException {
-        Response resp = new Response.Builder().type(ResponseType.ADD_TICKET).data(ticket).build();
+        TravelMainResponse resp = ProtoUtils.createTicketResponse(ticket);
         System.out.println("Ticket added " + ticket);
         try {
             sendResponse(resp);
@@ -82,7 +81,7 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
 
     @Override
     public void saveFlight(Flight flight) throws TravelException {
-        Response resp = new Response.Builder().type(ResponseType.ADD_FLIGHT).data(flight).build();
+        TravelMainResponse resp = ProtoUtils.createFlightResponse(flight);
         System.out.println("Flight added " + flight);
         try {
             sendResponse(resp);
@@ -91,16 +90,16 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
         }
     }
 
-    private static Response okResponse = new Response.Builder().type(ResponseType.OK).build();
+    //private static Response okResponse = new Response.Builder().type(ResponseType.OK).build();
 
-    private Response handleRequest(Request request){
-        Response response = null;
-        String handlerName = "handle" + (request).type();
+    private TravelMainResponse handleRequest(TravelMainRequest request){
+        TravelMainResponse response = null;
+        String handlerName = "handle" + ProtoUtils.getTypeRequest(request);
         System.out.println("HandlerName " + handlerName);
 
         try {
-            Method method = this.getClass().getDeclaredMethod(handlerName, Request.class);
-            response = (Response) method.invoke(this, request);
+            Method method = this.getClass().getDeclaredMethod(handlerName, TravelMainRequest.class);
+            response = (TravelMainResponse) method.invoke(this, request);
             System.out.println("Method " + handlerName + " invoked");
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
@@ -113,81 +112,81 @@ public class TravelClientRpcReflectionWorker implements Runnable, ITravelObserve
         return response;
     }
 
-    private void sendResponse(Response response) throws IOException {
+    private void sendResponse(TravelMainResponse response) throws IOException {
         System.out.println("sending response " + response);
-        output.writeObject(response);
+        response.writeDelimitedTo(output);
         output.flush();
     }
 
-    private Response handleLOGIN(Request request){
-        System.out.println("Login request ..." + request.type());
-        Employee employee = (Employee)request.data();
+    private TravelMainResponse handleLOGIN(TravelMainRequest request){
+        System.out.println("Login request ..." + ProtoUtils.getTypeRequest(request));
+        Employee employee = ProtoUtils.getEmployeeRequest(request);
         try{
             server.login(employee, this);
-            return okResponse;
+            return ProtoUtils.createOkResponse();
         } catch (TravelException e) {
             connected = false;
-            return  new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            return ProtoUtils.createErrorResponse(e.getMessage());
         }
     }
 
-    private Response handleLOGOUT(Request request){
+    private TravelMainResponse handleLOGOUT(TravelMainRequest request){
         System.out.println("LogOUT request ...");
-        Employee employee = (Employee) request.data();
+        Employee employee = ProtoUtils.getEmployeeRequest(request);
         try {
             server.logout(employee, this);
             connected = false;
-            return okResponse;
+            return ProtoUtils.createOkResponse();
         } catch (TravelException e) {
-            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            return ProtoUtils.createErrorResponse(e.getMessage());
         }
     }
 
-    private Response handleFLIGHTS_BY_DESTINATION_AND_DEPARTURE(Request request){
+    private TravelMainResponse handleFLIGHTS_BY_DESTINATION_AND_DEPARTURE(TravelMainRequest request){
         System.out.println("Filter flights by destination and departure ...");
-        FlightDestDepDTO flightDestDepDTO = (FlightDestDepDTO) request.data();
+        FlightDestDepDTO flightDestDepDTO = ProtoUtils.getFlightDestDepRequest(request);
         String destination = flightDestDepDTO.getDestination();
         LocalDate departure = flightDestDepDTO.getDeparture();
         try{
             Collection<Flight> flights = server.filterFlightsByDestinationAndDeparture(destination, departure);
-            return new Response.Builder().type(ResponseType.FLIGHT_DESTINATION_DEPARTURE).data(flights).build();
+            return ProtoUtils.createDestinationDepartureResponse(flights);
         } catch (TravelException e) {
-            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            return ProtoUtils.createErrorResponse(e.getMessage());
         }
     }
 
-    private Response handleFLIGHT_BY_AVAILABLE_SEATS(Request request){
+    private TravelMainResponse handleFLIGHT_BY_AVAILABLE_SEATS(TravelMainRequest request){
         System.out.println("Filter flights by available seats ...");
         try{
             Collection<Flight> flights = server.filterFlightByAvailableSeats();
-            return new Response.Builder().type(ResponseType.AVAILABLE_SEATS).data(flights).build();
+            return ProtoUtils.createAvailableSeatsResponse(flights);
         } catch (TravelException e) {
-            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            return ProtoUtils.createErrorResponse(e.getMessage());
         }
     }
 
-    private Response handleBUY_TICKET_TRAVEL(Request request){
+    private TravelMainResponse handleBUY_TICKET_TRAVEL(TravelMainRequest request){
         System.out.println("savind ticket ...");
-        Ticket ticket = (Ticket) request.data();
+        Ticket ticket = ProtoUtils.getTicketRequest(request);
         System.out.println("Balancii ai primit " + ticket);
         try{
             server.addTicket(ticket);
-            return okResponse;
+            return ProtoUtils.createOkResponse();
         } catch (TravelException e) {
-            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            return ProtoUtils.createErrorResponse(e.getMessage());
         }catch (ValidationException e) {
-            return new Response.Builder().type(ResponseType.ERROR_UNVAILABLE_SEATS).data(e.getMessage()).build();
+            return ProtoUtils.createErrorNoSeatsResponse(e.getMessage());
         }
     }
 
-    private Response handleFLIGHT_ADD_COMPANY(Request request){
+    private TravelMainResponse handleFLIGHT_ADD_COMPANY(TravelMainRequest request){
         System.out.println("saving flight ...");
-        Flight flight = (Flight) request.data();
+        Flight flight = ProtoUtils.getFlightRequest(request);
         try{
             server.addFlight(flight);
-            return okResponse;
+            return ProtoUtils.createOkResponse();
         } catch (TravelException e) {
-            return new Response.Builder().type(ResponseType.ERROR).data(e.getMessage()).build();
+            return ProtoUtils.createErrorResponse(e.getMessage());
         }
     }
 }

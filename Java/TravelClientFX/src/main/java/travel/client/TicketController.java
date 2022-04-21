@@ -1,5 +1,6 @@
 package travel.client;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -71,7 +72,7 @@ public class TicketController {
         try {
             Integer seats = Integer.valueOf(textFieldSeats.getText());
             Flight flight = new Flight(flightForTicket.getID(),flightForTicket.getDestination(),flightForTicket.getDeparture(), flightForTicket.getAirport(), flightForTicket.getAvailableSeats());
-            Ticket ticket = new Ticket(customerName, touristName, customerAddress, seats, flight);
+            Ticket ticket = new Ticket(0,customerName, touristName, customerAddress, seats, flight);
             server.addTicket(ticket);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

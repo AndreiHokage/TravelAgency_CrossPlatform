@@ -1,5 +1,6 @@
 package travel.client;
 
+
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -171,6 +172,7 @@ public class TravelController implements ITravelObserver {
 
     @Override
     public void soldTicket(Ticket ticket) throws TravelException {
+        System.out.println("sold ticket method Observer controller....");
         Platform.runLater(() -> {
             initModelAllFlights();
             LocalDate convertDate = ticket.getFlight().getDeparture().toLocalDate();

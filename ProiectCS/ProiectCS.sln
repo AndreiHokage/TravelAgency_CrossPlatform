@@ -10,9 +10,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelServices", "travelSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelPersistence", "travelPersistence\travelPersistence.csproj", "{AC8BB19E-B5F7-4A60-B44C-63EA4F266142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelServer", "travelServer\travelServer.csproj", "{F018E501-45B1-4ACF-9E94-C7994728D6A2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelClientForm", "travelClientForm\travelClientForm.csproj", "{7F074B5C-FE32-403D-8844-607AFC32BE93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelServer2", "travelServer2\travelServer2.csproj", "{EF04315D-1CA1-4F1D-BD28-44E272E1E114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,13 +40,13 @@ Global
 		{AC8BB19E-B5F7-4A60-B44C-63EA4F266142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC8BB19E-B5F7-4A60-B44C-63EA4F266142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC8BB19E-B5F7-4A60-B44C-63EA4F266142}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F018E501-45B1-4ACF-9E94-C7994728D6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F018E501-45B1-4ACF-9E94-C7994728D6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F018E501-45B1-4ACF-9E94-C7994728D6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F018E501-45B1-4ACF-9E94-C7994728D6A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F074B5C-FE32-403D-8844-607AFC32BE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F074B5C-FE32-403D-8844-607AFC32BE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F074B5C-FE32-403D-8844-607AFC32BE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F074B5C-FE32-403D-8844-607AFC32BE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

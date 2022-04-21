@@ -298,6 +298,7 @@ namespace ProiectCS
         {
             DateTime dateTimeDateField = ticket.FlightForTicket.Departure.Date;
             DateTime dateTimeDateTicket = ticket.FlightForTicket.Departure.Date;
+
             if (destinationField == ticket.FlightForTicket.Destination &&
                 dateTimeDateField == dateTimeDateTicket)
             {

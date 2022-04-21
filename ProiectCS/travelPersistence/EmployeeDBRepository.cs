@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using log4net;
-using NET.repository;
 using Npgsql;
 using travelModel;
 

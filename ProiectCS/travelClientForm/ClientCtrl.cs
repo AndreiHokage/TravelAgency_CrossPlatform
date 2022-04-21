@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using travelModel;
+using travelNetworking;
 using travelServices;
 
 namespace ProiectCS
@@ -12,7 +13,7 @@ namespace ProiectCS
         private readonly ITravelServices server;
         private Employee _employee;
 
-        public ClientCtrl(ITravelServices server)
+        public ClientCtrl(ITravelServices  server)
         {
             this.server = server;
             this._employee = null;
@@ -63,9 +64,12 @@ namespace ProiectCS
 
         protected virtual void OnUserEvent(TravelUserEventArgs e)
         {
+            Console.WriteLine("pk k ok o o k o k ");
             if (updateEvent == null) return;
+            Console.WriteLine("pppppppp ppppp");
             updateEvent(this, e);
             Console.WriteLine("Update Event Called");
         }
+        
     }
 }

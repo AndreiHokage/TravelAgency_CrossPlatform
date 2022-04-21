@@ -1,0 +1,78 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "generatedcode";
+option java_outer_classname = "TravelProto";
+
+service ITravelServicesProto{
+
+  rpc Login(Employee) returns (TravelResponse) {}
+  rpc Logout(Employee) returns (TravelResponse) {}
+  rpc FilterFlightsByDestinationAndDeparture(FlightDestDepDTO) returns (stream Flight) {}
+  rpc FilterFlightByAvailableSeats(TravelRequest) returns (stream Flight) {}
+  rpc AddTicket(stream Ticket) returns (stream Ticket) {}
+  rpc AddFlight(Flight) returns (TravelResponse) {}
+
+}
+
+message Flight{
+  int32 id = 1;
+  string destination = 2;
+  google.protobuf.Timestamp departure = 3;
+  string airport = 4;
+  int32 availableSeats = 5;
+}
+
+message Ticket{
+  int32 id = 1;
+  string customerName = 2;
+  string touristName = 3;
+  string customerAddress = 4;
+  int32 seats = 5;
+  Flight flight = 6;
+}
+
+message FlightDestDepDTO{
+  string destination = 1;
+  google.protobuf.Timestamp departure = 2;
+}
+
+message TravelResponse{
+  enum Type { OK = 0; ERROR = 1; }
+  Type type = 1;
+  string error = 2;
+}
+
+message TravelRequest{
+  enum Type { FLIGHT_BY_AVAILABLE_SEATS = 0; }
+  Type type = 1;
+}
+
+message TravelMainRequest{
+  enum Type {LOGIN=0; LOGOUT=1; BUY_TICKET_TRAVEL=2;
+    FLIGHTS_BY_DESTINATION_AND_DEPARTURE=3; FLIGHT_BY_AVAILABLE_SEATS=4; FLIGHT_ADD_COMPANY=5;}
+  Type type = 1;
+  oneof payload{
+    Employee user = 2;
+    Flight flight = 3;
+    Ticket ticket = 4;
+    FlightDestDepDTO flightDestDepDTO = 5;
+  }
+}
+
+message TravelMainResponse{
+  enum Type{OK=0; ERROR=1; ADD_TICKET=2; ADD_FLIGHT=3; FLIGHT_DESTINATION_DEPARTURE=4;
+      AVAILABLE_SEATS=5; ERROR_UNVAILABLE_SEATS=6;}
+  Type type = 1;
+  string error = 2;
+  repeated Flight flights = 3;
+  Flight flight = 4;
+  Ticket ticket = 5;
+}
+
+message Employee{
+  int32 id = 1;
+  string username = 2;
+  string password = 3;
+}

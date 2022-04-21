@@ -1,4 +1,5 @@
 import chat.network.utils.AbstractServer;
+import chat.network.utils.ChatProtobuffConcurrentServer;
 import chat.network.utils.ServerException;
 import chat.network.utils.TravelRpcConcurrentServer;
 import chat.persistence.*;
@@ -42,7 +43,8 @@ public class StartRpcServer {
         }
 
         System.out.println("Starting server on port: " + travelServerPort);
-        AbstractServer server = new TravelRpcConcurrentServer(travelServerPort, travelServerImpl);
+        //AbstractServer server = new TravelRpcConcurrentServer(travelServerPort, travelServerImpl);
+        AbstractServer server = new ChatProtobuffConcurrentServer(travelServerPort, travelServerImpl);
         try{
             server.start();
         } catch (ServerException e) {
