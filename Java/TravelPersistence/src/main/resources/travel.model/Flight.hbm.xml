@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="travel.model">
+    <class name="Flight" table="FLIGHTS_ORM">
+        <id name="ID" column="FLIGHT_ID">
+            <generator class="increment"/>
+        </id>
+        <property name="destination" column="FLIGHT_DESTINATION" type="java.lang.String"/>
+        <property name="departure" column="FLIGHT_DEPARTURE" type="java.time.LocalDateTime"/>
+        <property name="airport" column="FLIGHT_AIRPORT" type="java.lang.String"/>
+        <property name="availableSeats" column="FLIGHT_AVAILABLE_SEATS" type="java.lang.Integer"/>
+    </class>
+</hibernate-mapping>

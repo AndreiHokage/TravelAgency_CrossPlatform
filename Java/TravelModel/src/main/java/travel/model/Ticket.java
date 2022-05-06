@@ -11,6 +11,8 @@ public class Ticket implements Identifiable<Integer>, Serializable {
     private Integer seats;
     private Flight flight;
 
+    public Ticket() {}
+
     public Ticket(Integer ID, String customerName, String touristName, String customerAddress, Integer seats , Flight flight) {
         this.ID = ID;
         this.customerName = customerName;

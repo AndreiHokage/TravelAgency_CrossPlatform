@@ -17,7 +17,70 @@
     <projectFile>travelServer/travelServer.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd604d45-861f-4246-8b65-80896acae588" name="Changes" comment="" />
+    <list default="true" id="fd604d45-861f-4246-8b65-80896acae588" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelClientFX/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelClientFX/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelModel/build/classes/java/main/travel/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelModel/build/classes/java/main/travel/model/Flight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelModel/build/classes/java/main/travel/model/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelModel/build/classes/java/main/travel/model/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelModel/build/libs/TravelModel-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelModel/build/libs/TravelModel-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelModel/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelModel/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelModel/src/main/java/travel/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelModel/src/main/java/travel/model/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelModel/src/main/java/travel/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelModel/src/main/java/travel/model/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelNetworking/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelNetworking/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelPersistence/build/libs/TravelPersistence-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelPersistence/build/libs/TravelPersistence-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelPersistence/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelPersistence/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/classes/java/main/StartRpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/classes/java/main/StartRpcServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/distributions/TravelServer-1.0.tar" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/distributions/TravelServer-1.0.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/distributions/TravelServer-1.0.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/distributions/TravelServer-1.0.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/libs/TravelServer-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/libs/TravelServer-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/scripts/TravelServer" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/scripts/TravelServer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/scripts/TravelServer.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/scripts/TravelServer.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServer/src/main/java/StartRpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServer/src/main/java/StartRpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/TravelServices/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/TravelServices/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProiectCS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelClientForm.exe" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelClientForm.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelClientForm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelClientForm.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelNetworking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelNetworking.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelNetworking.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelNetworking.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/bin/Debug/travelServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/obj/Debug/travelClientForm.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/obj/Debug/travelClientForm.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/obj/Debug/travelClientForm.exe" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/obj/Debug/travelClientForm.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelClientForm/obj/Debug/travelClientForm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelClientForm/obj/Debug/travelClientForm.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelModel/bin/Debug/travelModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/bin/Debug/travelModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelModel/bin/Debug/travelModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/bin/Debug/travelModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelModel/obj/Debug/travelModel.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/obj/Debug/travelModel.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelModel/obj/Debug/travelModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/obj/Debug/travelModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelModel/obj/Debug/travelModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelModel/obj/Debug/travelModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelNetworking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelNetworking.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelNetworking.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelNetworking.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/bin/Debug/travelServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/obj/Debug/travelNetworking.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/obj/Debug/travelNetworking.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/obj/Debug/travelNetworking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/obj/Debug/travelNetworking.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelNetworking/obj/Debug/travelNetworking.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelNetworking/obj/Debug/travelNetworking.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServer2/obj/Debug/travelServer2.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/travelServer2/obj/Debug/travelServer2.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/bin/Debug/travelModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/bin/Debug/travelModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/bin/Debug/travelModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/bin/Debug/travelModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/bin/Debug/travelServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/bin/Debug/travelServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/bin/Debug/travelServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/bin/Debug/travelServices.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/obj/Debug/travelServices.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/obj/Debug/travelServices.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/obj/Debug/travelServices.dll" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/obj/Debug/travelServices.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travelServices/obj/Debug/travelServices.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/travelServices/obj/Debug/travelServices.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -396,6 +459,8 @@
       <workItem from="1650276675353" duration="23925000" />
       <workItem from="1650349309627" duration="1094000" />
       <workItem from="1650531442916" duration="289000" />
+      <workItem from="1650663740840" duration="636000" />
+      <workItem from="1651559002445" duration="643000" />
     </task>
     <servers />
   </component>
