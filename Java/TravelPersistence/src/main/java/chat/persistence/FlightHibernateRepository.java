@@ -3,6 +3,8 @@ package chat.persistence;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import travel.model.Flight;
 import travel.model.Ticket;
 
@@ -11,10 +13,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
 
+@Component
 public class FlightHibernateRepository implements FlightRepository{
 
     private SessionFactory sessionFactory;
 
+
+    @Autowired
     public FlightHibernateRepository(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
@@ -26,6 +31,13 @@ public class FlightHibernateRepository implements FlightRepository{
             try {
                 tx = session.beginTransaction();
                 session.save(elem);
+                String findStmt = "from Flight ";
+                Collection<Flight> flights = session.createQuery(findStmt, Flight.class).list();
+                Integer maxi = -1;
+                for(Flight flight: flights)
+                    if(flight.getID() > maxi)
+                        maxi = flight.getID();
+                elem.setID(maxi);
                 tx.commit();
             }
             catch (RuntimeException ex){

@@ -3,6 +3,8 @@ package chat.persistence;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import travel.model.Flight;
 
 
@@ -14,10 +16,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 
+
 public class FlightDBRepository implements FlightRepository{
 
     private final static Logger logger =  LogManager.getLogger(FlightDBRepository.class);
     private JdbcUtils dbUtils;
+
 
     public FlightDBRepository(Properties properties){
         logger.info("creating FlightDBRepository");

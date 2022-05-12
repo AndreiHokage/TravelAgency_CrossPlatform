@@ -5,4 +5,5 @@ include 'TravelServices'
 include 'TravelNetworking'
 include 'TravelPersistence'
 include 'TravelServer'
+include 'RestServices'
 
