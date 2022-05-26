@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelClientForm", "travelC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "travelServer2", "travelServer2\travelServer2.csproj", "{EF04315D-1CA1-4F1D-BD28-44E272E1E114}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestServices", "RestServices\RestServices.csproj", "{65C2E2FE-C76A-4CC1-9F72-B3CF00B9974F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF04315D-1CA1-4F1D-BD28-44E272E1E114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C2E2FE-C76A-4CC1-9F72-B3CF00B9974F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C2E2FE-C76A-4CC1-9F72-B3CF00B9974F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C2E2FE-C76A-4CC1-9F72-B3CF00B9974F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C2E2FE-C76A-4CC1-9F72-B3CF00B9974F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

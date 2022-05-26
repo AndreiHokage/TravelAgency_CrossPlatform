@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan({"rest", "chat"})
+@ComponentScan({"rest", "chat", "travel"})
 @SpringBootApplication
 public class StartRestServices {
     static SessionFactory sessionFactory;
@@ -20,13 +20,12 @@ public class StartRestServices {
 
     @Bean(name = "sessionFactory")
     public SessionFactory getSessionFactory(){
-        
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure() // configures settings from hibernate.cfg.xml
                 .build();
         try {
             sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
-            System.out.println("S-a creat");
+            System.out.println("The session factory has been created!");
         }
         catch (Exception e) {
             System.err.println("Exception "+e);

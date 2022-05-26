@@ -5,7 +5,7 @@ namespace travelModel
     [Serializable]
     public class Flight : IIdentifiable<int>
     {
-        public int ID { set; get; }
+        public int ID { get; set;  }
         public string Destination { set; get; }
 
         public DateTime Departure { set; get; }
@@ -14,6 +14,11 @@ namespace travelModel
 
         public int AvailableSeats { set; get; }
 
+        public Flight()
+        {
+            
+        }
+        
         public Flight(int ID, string destination, DateTime departure, string airport, int availableSeats)
         {
             this.ID = ID;

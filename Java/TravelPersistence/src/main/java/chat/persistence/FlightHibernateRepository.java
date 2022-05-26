@@ -18,7 +18,6 @@ public class FlightHibernateRepository implements FlightRepository{
 
     private SessionFactory sessionFactory;
 
-
     @Autowired
     public FlightHibernateRepository(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;

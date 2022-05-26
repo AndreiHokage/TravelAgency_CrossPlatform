@@ -27,7 +27,7 @@ public class StartRpcServer {
                 .build();
         try {
             sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
-            System.out.println("S-a creat");
+            System.out.println("It has been created in StartRpcServer");
         }
         catch (Exception e) {
             System.err.println("Exception "+e);
