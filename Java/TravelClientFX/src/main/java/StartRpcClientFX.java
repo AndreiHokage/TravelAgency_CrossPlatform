@@ -51,7 +51,7 @@ public class StartRpcClientFX extends Application {
 
 
         LogInController logInController = fxmlLoader.getController();
-        logInController.setServer(server);
+        //logInController.setServer(server);
 
         FXMLLoader cloader = new FXMLLoader(getClass().getClassLoader().getResource("views/travel.fxml"));
         Parent croot = cloader.load();

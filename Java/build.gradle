@@ -43,6 +43,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
     implementation "de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2"
+    implementation 'ch.cordsen:geojson-serializer:0.6.0'
 
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'

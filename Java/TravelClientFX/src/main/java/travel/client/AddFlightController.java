@@ -10,12 +10,13 @@ import javafx.stage.Stage;
 import tornadofx.control.DateTimePicker;
 import travel.model.Flight;
 import travel.model.validators.ValidationException;
+import travel.services.ITravelASMServices;
 import travel.services.ITravelServices;
 
 import java.time.LocalDateTime;
 
 public class AddFlightController {
-    ITravelServices server;
+    ITravelASMServices server;
 
     @FXML
     TextField textFieldDestination;
@@ -26,7 +27,7 @@ public class AddFlightController {
     @FXML
     TextField textFieldAvailableSeats;
 
-    public void setServer(ITravelServices server){
+    public void setServer(ITravelASMServices server){
         this.server = server;
     }
 

@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import travel.model.Employee;
+import travel.services.ITravelASMServices;
 import travel.services.ITravelServices;
 import travel.services.TravelException;
 
@@ -20,7 +21,7 @@ import java.io.IOException;
 
 
 public class LogInController {
-    private ITravelServices server;
+    private ITravelASMServices server;
     private TravelController travelController;
     private Parent mainTravelParent;
 
@@ -29,7 +30,7 @@ public class LogInController {
     @FXML
     PasswordField textFieldPassword;
 
-    public void setServer(ITravelServices server){
+    public void setServer(ITravelASMServices server){
         this.server = server;
     }
 
@@ -52,13 +53,13 @@ public class LogInController {
         String password = textFieldPassword.getText();
         Employee employee = new Employee(0, username, password);
         try {
-            server.login(employee, travelController);
+            server.login(employee);
 
         } catch (TravelException e) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Travel Agency");
             alert.setHeaderText("Authentication failure");
-            alert.setContentText("Wrong username or password");
+            alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
 
@@ -71,7 +72,8 @@ public class LogInController {
             @Override
             public void handle(WindowEvent event) {
                 try {
-                    server.logout(employee, travelController);
+                    server.logout(employee);
+                    travelController.logout();
                 } catch (TravelException e) {
                     e.printStackTrace();
                 }

@@ -40,6 +40,12 @@ public class FlightDBRepository implements FlightRepository{
             insertStmt.setString(3, elem.getAirport());
             insertStmt.setInt(4,elem.getAvailableSeats());
             insertStmt.executeUpdate();
+            Collection<Flight> flights = getAll();
+            Integer maxi = 0;
+            for(Flight flight: flights)
+                if(flight.getID() > maxi)
+                    maxi = flight.getID();
+            elem.setID(maxi);
         } catch (SQLException e) {
             logger.error(e);
         }

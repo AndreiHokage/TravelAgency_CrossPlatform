@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="serverProps" location="classpath:travelServer.properties" />
+
+    <bean id="flightValidator" class="travel.model.validators.FlightValidator" />
+    <bean id="ticketValidator" class="travel.model.validators.TicketValidator" />
+
+    <bean id="employeeRepository" class="chat.persistence.EmployeeDBRepository">
+        <constructor-arg ref="serverProps" />
+    </bean>
+
+    <bean id="flightRepository" class="chat.persistence.FlightDBRepository">
+        <constructor-arg ref="serverProps" />
+    </bean>
+
+    <bean id="ticketRepository" class="chat.persistence.TicketDBRepository">
+        <constructor-arg ref="flightRepository" />
+        <constructor-arg ref="serverProps" />
+    </bean>
+
+    <bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory" />
+
+    <bean id="topic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="TravelTopic"/>
+    </bean>
+
+    <bean id="converter" class="org.springframework.jms.support.converter.MappingJackson2MessageConverter">
+        <property name="targetType" value="TEXT"/>
+        <property name="typeIdPropertyName" value="_notification"/>
+    </bean>
+
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <constructor-arg ref="connectionFactory"/>
+        <property name="defaultDestination" ref="topic"/>
+        <property name="messageConverter" ref="converter"/>
+    </bean>
+
+    <bean id="notificationService" class="travel.server.NotificationServiceImpl">
+        <constructor-arg ref="jmsTemplate"/>
+    </bean>
+
+    <bean id="travelServerASMImpl" class="travel.server.TravelServicesASMImpl" >
+        <constructor-arg ref="employeeRepository"/>
+        <constructor-arg ref="flightRepository"/>
+        <constructor-arg ref="flightValidator"/>
+        <constructor-arg ref="ticketRepository"/>
+        <constructor-arg ref="ticketValidator"/>
+        <constructor-arg ref="notificationService"/>
+    </bean>
+
+    <bean id="travelTCPServer" class="chat.network.utils.TravelRpcAMSConcurrentServer">
+        <constructor-arg value="#{serverProps.getProperty('travel.server.port')}"/>
+        <constructor-arg ref="travelServerASMImpl"/>
+    </bean>
+
+</beans>

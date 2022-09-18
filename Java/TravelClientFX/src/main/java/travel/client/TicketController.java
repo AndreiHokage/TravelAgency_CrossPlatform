@@ -11,11 +11,12 @@ import javafx.scene.control.TextField;
 import travel.model.Flight;
 import travel.model.Ticket;
 import travel.model.validators.ValidationException;
+import travel.services.ITravelASMServices;
 import travel.services.ITravelServices;
 
 public class TicketController {
     private Flight flightForTicket;
-    private ITravelServices server;
+    private ITravelASMServices server;
 
     @FXML
     TextField textFieldCustomerName;
@@ -36,14 +37,14 @@ public class TicketController {
         System.out.println("Constructor TicketController");
     }
 
-    public TicketController(ITravelServices server, Flight flightForTicket){
+    public TicketController(ITravelASMServices server, Flight flightForTicket){
         this.server = server;
         this.flightForTicket = flightForTicket;
         System.out.println("constructor TicketController with server param");
         initTicket();
     }
 
-    public void setServer(ITravelServices server){
+    public void setServer(ITravelASMServices server){
         this.server = server;
     }
 

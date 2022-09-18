@@ -14,10 +14,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import travel.model.Flight;
 import travel.model.Ticket;
-import travel.services.ITravelObserver;
-import travel.services.ITravelServices;
-import travel.services.TravelException;
+import travel.model.notification.Notification;
+import travel.services.*;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -26,9 +26,10 @@ import java.util.Collection;
 import java.util.ResourceBundle;
 
 
-public class TravelController implements ITravelObserver {
+public class TravelController implements INotificationSubscriber {
 
-    private ITravelServices server;
+    private ITravelASMServices server;
+    private INotificationReceiver receiver;
     private String destinationField = null;
     private LocalDate departureField = null;
 
@@ -65,15 +66,25 @@ public class TravelController implements ITravelObserver {
         System.out.println("Constructor TravelController");
     }
 
-    public TravelController(ITravelServices server){
+    public TravelController(ITravelASMServices server){
         this.server = server;
         System.out.println("constructor TravelController cu server param");
         initModelAllFlights();
     }
 
-    public void setServer(ITravelServices server){
+    public void setServer(ITravelASMServices server){
         this.server = server;
         initModelAllFlights();
+        receiver.start(this);
+    }
+
+    public void setReceiver(INotificationReceiver receiver) {
+        this.receiver = receiver;
+    }
+
+
+    public void logout(){
+        receiver.stop();
     }
 
     @FXML
@@ -170,39 +181,80 @@ public class TravelController implements ITravelObserver {
 //        System.out.println("END INIT!!!!!!!!!");
 //    }
 
-    @Override
-    public void soldTicket(Ticket ticket) throws TravelException {
-        System.out.println("sold ticket method Observer controller....");
-        Platform.runLater(() -> {
-            initModelAllFlights();
-            LocalDate convertDate = ticket.getFlight().getDeparture().toLocalDate();
-            if(destinationField.equals(ticket.getFlight().getDestination()) && departureField.equals(convertDate)){
-                Collection<Flight> flights = null;
-                try {
-                    flights = server.filterFlightsByDestinationAndDeparture(destinationField,departureField);
-                    modelAllFlightsTicket.setAll(flights);
-                } catch (TravelException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
+//    @Override
+//    public void soldTicket(Ticket ticket) throws TravelException {
+//        System.out.println("sold ticket method Observer controller....");
+//        Platform.runLater(() -> {
+//            initModelAllFlights();
+//            LocalDate convertDate = ticket.getFlight().getDeparture().toLocalDate();
+//            if(destinationField.equals(ticket.getFlight().getDestination()) && departureField.equals(convertDate)){
+//                Collection<Flight> flights = null;
+//                try {
+//                    flights = server.filterFlightsByDestinationAndDeparture(destinationField,departureField);
+//                    modelAllFlightsTicket.setAll(flights);
+//                } catch (TravelException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//    }
+//
+//    @Override
+//    public void saveFlight(Flight flight) throws TravelException {
+//        Platform.runLater(() -> {
+//            initModelAllFlights();
+//            LocalDate convertDate = flight.getDeparture().toLocalDate();
+//            if(destinationField.equals(flight.getDestination()) && departureField.equals(convertDate)){
+//                Collection<Flight> flights = null;
+//                try {
+//                    flights = server.filterFlightsByDestinationAndDeparture(destinationField,departureField);
+//                    modelAllFlightsTicket.setAll(flights);
+//                } catch (TravelException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//    }
 
     @Override
-    public void saveFlight(Flight flight) throws TravelException {
-        Platform.runLater(() -> {
-            initModelAllFlights();
-            LocalDate convertDate = flight.getDeparture().toLocalDate();
-            if(destinationField.equals(flight.getDestination()) && departureField.equals(convertDate)){
-                Collection<Flight> flights = null;
-                try {
-                    flights = server.filterFlightsByDestinationAndDeparture(destinationField,departureField);
-                    modelAllFlightsTicket.setAll(flights);
-                } catch (TravelException e) {
-                    e.printStackTrace();
+    public void notificationReceived(Notification notif) {
+        try{
+            System.out.println("Ctrl notificationReceived ..." + notif.getType());
+            SwingUtilities.invokeLater(()->{
+                switch (notif.getType()){
+                    case SAVE_FLIGHT:{
+                        Flight flight = notif.getFlight();
+                        initModelAllFlights();
+                        LocalDate convertDate = flight.getDeparture().toLocalDate();
+                        if(destinationField.equals(flight.getDestination()) && departureField.equals(convertDate)){
+                            Collection<Flight> flights = null;
+                            try {
+                                flights = server.filterFlightsByDestinationAndDeparture(destinationField,departureField);
+                                modelAllFlightsTicket.setAll(flights);
+                            } catch (TravelException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                    case BUY_TICKET:{
+                        Ticket ticket = notif.getTicket();
+                        System.out.println("BALANICI ENTER BUY_TICKE:  " + ticket);
+                        initModelAllFlights();
+                        LocalDate convertDate = ticket.getFlight().getDeparture().toLocalDate();
+                        if(destinationField.equals(ticket.getFlight().getDestination()) && departureField.equals(convertDate)){
+                            Collection<Flight> flights = null;
+                            try {
+                                flights = server.filterFlightsByDestinationAndDeparture(destinationField,departureField);
+                                modelAllFlightsTicket.setAll(flights);
+                            } catch (TravelException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
                 }
-            }
-        });
+            });
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
     }
-
 }
